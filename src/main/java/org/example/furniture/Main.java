@@ -1,8 +1,10 @@
 package org.example.furniture;
+
 import java.util.Scanner;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         Table table = new Table(10, 10, 20, 123.1, "стол");
         Chair chair = new Chair(5, 5, 10, 95.6, "стул");
@@ -15,21 +17,37 @@ public class Main {
         printFurniture(arrFurniture);
     }
 
-        public static void printFurniture(Furniture[] arrFurniture) {
-            String answer = sc.nextLine();
-            switch (answer) {
-                default: System.out.println("Неверно введенное значение. Попробуйте еще раз."); break;
-                case "1":
-                    System.out.println("Весь список мебели:");
-                    getFurniture(arrFurniture, ""); break;
-                case "2": getFurniture(arrFurniture, "стол"); break;
-                case "3": getFurniture(arrFurniture, "кровать"); break;
-                case "4": getFurniture(arrFurniture, "комод"); break;
-                case "5": getFurniture(arrFurniture, "стул"); break;
-                case "6": getFurniture(arrFurniture, "чайник"); break;
-                case "7": mostExpensiveProduct(arrFurniture); break;
-            }
-        }
+    public static void printFurniture(Furniture[] arrFurniture) {
+        String answer = sc.nextLine();
+
+//        switch (answer) {
+//            default:
+//                System.out.println("Неверно введенное значение. Попробуйте еще раз.");
+//                break;
+//            case "1":
+//                System.out.println("Весь список мебели:");
+//                getFurniture(arrFurniture, "");
+//                break;
+//            case "2":
+//                getFurniture(arrFurniture, "стол");
+//                break;
+//            case "3":
+//                getFurniture(arrFurniture, "кровать");
+//                break;
+//            case "4":
+//                getFurniture(arrFurniture, "комод");
+//                break;
+//            case "5":
+//                getFurniture(arrFurniture, "стул");
+//                break;
+//            case "6":
+//                getFurniture(arrFurniture, "чайник");
+//                break;
+//            case "7":
+//                mostExpensiveProduct(arrFurniture);
+//                break;
+//        }
+    }
 
     public static void getFurniture(Furniture[] arrFurniture, String str) {
         for (Furniture f : arrFurniture) {
@@ -44,7 +62,7 @@ public class Main {
     public static void mostExpensiveProduct(Furniture[] arrFurniture) {
         double expensive = 0;
         for (Furniture f : arrFurniture) {
-            if(f.price > expensive) {
+            if (f.price > expensive) {
                 expensive = f.price;
             }
         }
