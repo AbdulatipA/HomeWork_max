@@ -10,12 +10,8 @@ public class Phone {
     String[] outgoingСallsArr = new String[2];
 
     void call(String phone){
-        if(phone.length()!=11){  ///почему скобки где length?
-            System.out.println("В номере должно быть 11 символов");
-        } else {
-            System.out.println("Идет звонок на данный номер...");
-            System.out.println("Звонок идет с номера: " + PhoneNumber + " на номер " + phone);
-        }
+        System.out.println("Идет звонок на данный номер...");
+        System.out.println("Звонок идет с номера: " + PhoneNumber + " на номер " + phone);
         saveNumberPhone(phone);
     }
 

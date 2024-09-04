@@ -44,13 +44,25 @@ public class Student {
         }
     }
 
-     public void setGrades(Integer[] grades) {
-        for(int i = 0; i < grades.length; i++) {
-            if(Arrays.equals(grades, this.grades)) {
-                this.grades = grades;
-                System.out.println(Arrays.toString(this.grades));
-            }
-        }
+     public boolean setGrades(Integer[] grades) {
+         if(grades.length <= this.grades.length) {
+             return false;
+         }
+         for (int i = 0; i < this.grades.length; i++) {
+             boolean count = false;
+             block2:
+             for(int j = 0; j < grades.length; j++) {
+                 if(grades[i].equals(this.grades[j])) {
+                     count = true;
+                     break block2;
+                 }
+             }
+             if(!count) {
+                 return false;
+             }
+         }
+         this.grades = grades;
+         return true;
     }
 
     public Student(String name, int group, int age) {
@@ -65,3 +77,15 @@ public class Student {
                 + Arrays.toString(grades);
     }
 }
+
+
+
+
+//         for (int i = 0; i < this.grades.length; i++) {
+//             if(grades[i] != null && this.grades[i] != null){
+//                 if(Arrays.equals(grades, this.grades) && grades.length > this.grades.length) {
+//                     this.grades = grades;
+//                     System.out.println(Arrays.toString(this.grades));
+//                 }
+//             }
+//         }
