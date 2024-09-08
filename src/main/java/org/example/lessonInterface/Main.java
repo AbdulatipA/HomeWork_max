@@ -1,5 +1,8 @@
 package org.example.lessonInterface;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Bus bus = new Bus();
@@ -7,8 +10,9 @@ public class Main {
         Human human = new Human("Human");
         Driver driver = new Driver("Driver");
 
+
         Passenger[] passengers = {conductor, human, driver};
-        bus.getPassengers(passengers);
+        bus.addPassenger(passengers);
         bus.freeSeats();
     }
 }
