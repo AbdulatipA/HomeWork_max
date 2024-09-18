@@ -10,7 +10,6 @@ public class Main {
         Human human = new Human("Human");
         Driver driver = new Driver("Driver");
 
-
         Passenger[] passengers = {conductor, human, driver};
         bus.addPassenger(passengers);
         bus.freeSeats();

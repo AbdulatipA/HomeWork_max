@@ -1,4 +1,5 @@
 package org.example.lessonInterface;
 
-public interface Passenger {
+public  interface Passenger {
 }
+   
