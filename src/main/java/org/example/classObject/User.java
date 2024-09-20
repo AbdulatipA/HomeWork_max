@@ -2,7 +2,7 @@ package org.example.classObject;
 
 import java.util.Objects;
 
-public class User {
+public class User implements Cloneable {
    private String name;
    private int age;
    private double balance;
@@ -17,6 +17,11 @@ public class User {
         this.city = city;
         this.login = login;
         this.password = password;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     @Override

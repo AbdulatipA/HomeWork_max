@@ -21,7 +21,12 @@ public class Main {
             System.out.println(u);
 
             if(u.getCity().equals("Москва")) {
-                userList.clone();
+//                userList.clone();
+                try {
+                    u.clone();
+                } catch (CloneNotSupportedException e) {
+                    throw new RuntimeException(e);
+                }
                 System.out.println("--- клон: " + u);
             }
         }
