@@ -1,6 +1,8 @@
 package org.example.classObject;
 
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
@@ -12,23 +14,26 @@ public class Main {
         userList.add(new User("Anton", 19, 52.1, "Астрахань", "822Anton", "An_n123"));
         userList.add(new User("Jack", 20, 365, "Москва", "881C", "8136J"));
 
-        System.out.println("Введите название города, я найду его и создам клон этого юзера");
-        print(userList);
+        List<User> result = print(userList);
+        for (User user : result) {
+            System.out.println(user + " Клон");
+        }
     }
 
-        static void print(ArrayList<User> userList) {
+
+        static ArrayList<User> print(ArrayList<User> userList) {
+        ArrayList<User> newUserList = new ArrayList<>();
         for (User u : userList) {
             System.out.println(u);
-
-            if(u.getCity().equals("Москва")) {
-//                userList.clone();
+            if(u.getCity().equals("Москва")){
                 try {
-                    u.clone();
+                    User userClone = (User) u.clone();
+                    newUserList.add(userClone);
                 } catch (CloneNotSupportedException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.println("--- клон: " + u);
             }
         }
+        return newUserList;
     }
 }

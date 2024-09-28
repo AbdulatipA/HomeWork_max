@@ -1,5 +1,6 @@
 package org.example.classObject;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class User implements Cloneable {
@@ -21,7 +22,7 @@ public class User implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        return new User(name, age, balance, city, login, password);
     }
 
     @Override
