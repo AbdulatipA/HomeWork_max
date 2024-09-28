@@ -1,4 +1,4 @@
-package org.example.typeofClasses.anonymousClass;
+package org.example.OOP.anonymousClass;
 
 public class Main  {
     public static void main(String[] args) {
