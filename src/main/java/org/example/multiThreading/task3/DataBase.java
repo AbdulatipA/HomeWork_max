@@ -1,4 +1,4 @@
-package org.example.multiThreading.task1.task3;
+package org.example.multiThreading.task3;
 
 import lombok.Getter;
 import lombok.Setter;

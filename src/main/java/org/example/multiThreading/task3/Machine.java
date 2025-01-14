@@ -1,4 +1,4 @@
-package org.example.multiThreading.task1.task3;
+package org.example.multiThreading.task3;
 
 
 public class Machine extends Thread {
