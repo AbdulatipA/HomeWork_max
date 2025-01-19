@@ -25,15 +25,4 @@ public class Task2 extends Thread{
             }
         }
     }
-
-//    static void printLoadingResources(){
-//        for(int i=0; i<20; i++){
-//            System.out.println("загрузка ресурсов с сервера" + i + name);
-//            try {
-//                Thread.sleep(5000);
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//        }
-//    }
 }
