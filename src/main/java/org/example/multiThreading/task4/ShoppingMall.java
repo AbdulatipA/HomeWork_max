@@ -14,8 +14,10 @@ public class ShoppingMall {
         try {
             for (int i = 0; i < lamps.length; i++) {
                 lamps[i] = "включен";
+                Thread.sleep(1000);
+                System.out.println(lamps[i]);
             }
-            Thread.sleep(1000);
+
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -27,17 +29,19 @@ public class ShoppingMall {
         try {
             for (int i = lamps.length - 1; i >= 0; i--) {
                 lamps[i] = "выключен";
+                Thread.sleep(1000);
+                System.out.println(lamps[i]);
             }
-            Thread.sleep(1000);
+
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         lock.unlock();
     }
 
-   public void printArr(){
-       for (String lamp : lamps) {
-           System.out.println(lamp);
-       }
-   }
+//   public void printArr(){
+//       for (String lamp : lamps) {
+//           System.out.println(lamp);
+//       }
+//   }
 }
